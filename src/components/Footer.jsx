@@ -9,17 +9,19 @@ function Footer() {
 
   return (
     <footer>
-      <p>© {year} Nishanth. All rights reserved.</p>
-
-      <ul>
-        {socialLinks.map((item, index) => (
-          <li key={index}>
-            <a href={item.url} target="_blank" rel="noopener noreferrer">
-              {item.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <div className="footer-inner">
+        <span className="nav-logo">Nishanth.</span>
+        <ul>
+          {socialLinks.map((item, index) => (
+            <li key={index}>
+              <a href={item.url} target="_blank" rel="noopener noreferrer">
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p>© {year} Nishanth. Crafted with ❤️ using React.</p>
+      </div>
     </footer>
   );
 }
